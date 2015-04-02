@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : fabricant.xml
+    Created on : April 1, 2015, 3:06 PM
+    Author     : Gus
+    Description:
+        Purpose of the document follows.
+-->
+
+<ns0:fabricant  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                xmlns:ns0='http://xml.netbeans.org/examples/fabricant'
+                xsi:schemaLocation='http://xml.netbeans.org/examples/fabricant fabricant.xsd' orderDate="">
+    <ns0:shipTo country="US">
+        <ns0:name>test</ns0:name>
+        <ns0:street>st-st</ns0:street>
+        <ns0:city>Boston</ns0:city>
+        <ns0:state>Massachusset</ns0:state>
+        <ns0:zip>123abc</ns0:zip>
+    </ns0:shipTo>
+    <ns0:billTo country="US">
+        <ns0:name>test</ns0:name>
+        <ns0:street>street</ns0:street>
+        <ns0:city>Boston</ns0:city>
+        <ns0:state>Boston</ns0:state>
+        <ns0:zip>123qwe</ns0:zip>
+    </ns0:billTo>
+    <ns0:comment></ns0:comment>
+    <ns0:items>
+      
+        <ns0:item partNum="123-AB">
+            <ns0:productName>DVD</ns0:productName>
+            <ns0:quantity>100</ns0:quantity>
+            <ns0:USPrice>200.5</ns0:USPrice>
+            <ns0:comment>red</ns0:comment>
+            <ns0:shipDate>2014-05-06</ns0:shipDate>
+        </ns0:item>
+    </ns0:items>
+
+</ns0:fabricant>

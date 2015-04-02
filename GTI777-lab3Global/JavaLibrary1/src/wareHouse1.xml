@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : wareHouse1.xml
+    Created on : April 1, 2015, 8:56 PM
+    Author     : Gus
+    Description:
+        Purpose of the document follows.
+-->
+
+<ns0:warehouse  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                xmlns:ns0='http://xml.netbeans.org/examples/fabricant'
+                xsi:schemaLocation='http://xml.netbeans.org/examples/fabricant wareHouse.xsd'>
+    <ns0:warehouse>
+        <ns0:idWarehouse></ns0:idWarehouse>
+        <ns0:items></ns0:items>
+        <ns0:location></ns0:location>
+    </ns0:warehouse>
+    <ns0:transaction></ns0:transaction>
+
+</ns0:warehouse>

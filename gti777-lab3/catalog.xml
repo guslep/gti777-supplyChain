@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/E:/universite/GTI777/gti777-lab3/src/java/fabricant.xsd" uri="src/conf/xml-resources/jaxb/fabricantBinding/fabricant.xsd"/>
+    <system systemId="file:/E:/universite/GTI777/gti777-lab3/src/java/wareHouse.xsd" uri="src/conf/xml-resources/jaxb/warehouseBinding/wareHouse.xsd"/>
+    <system systemId="file:/G:/universite/GTI777/gti777-lab3/src/java/wareHouse.xsd" uri="src/conf/xml-resources/jaxb/warehouseBinding/wareHouse.xsd"/>
+</catalog>
