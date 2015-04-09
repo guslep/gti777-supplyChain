@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<purchaseOrderInfo xmlns="http://xml.netbeans.org/examples/PurchaseOrder" orderDate="2015-04-02-04:00">
+    <shipTo country="US">
+        <name>Super warehouse A</name>
+        <street>123 test street</street>
+        <city>Washington</city>
+        <state>Washington DC</state>
+        <zip>2398</zip>
+    </shipTo>
+    <shipDate>2015-05-02-04:00</shipDate>
+    <billTo country="US">
+        <name>Super warehouse A</name>
+        <street>123 test street</street>
+        <city>Washington</city>
+        <state>Washington DC</state>
+        <zip>2398</zip>
+    </billTo>
+    <comment>test Order</comment>
+    <purchaseOrder>
+        <item partNum="123-PB">
+            <productName>DVDPLAYER</productName>
+            <quantity>200</quantity>
+            <USPrice>200.55</USPrice>
+            <type>DVD player</type>
+        </item>
+        <item partNum="457-CA">
+            <productName>TV 3d 56''</productName>
+            <quantity>250</quantity>
+            <USPrice>900.55</USPrice>
+            <type>TV</type>
+        </item>
+    </purchaseOrder>
+    <totalPrice>265248</totalPrice>
+    <purchaseOrderNumber>654987321</purchaseOrderNumber>
+    <clientId>787879546</clientId>
+</purchaseOrderInfo>

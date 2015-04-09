@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<itemsInfo xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <item partNum="123-AB">
+        <productName>DVD player black with multiple tray</productName>
+        <USPrice>72.0</USPrice>
+        <type>DVD player</type>
+		
+    </item>
+    <item partNum="122-AE">
+        <productName>TV Inteligente </productName>
+        <USPrice>500.0</USPrice>
+        <type>TV</type>
+    </item>
+    <item partNum="456-CA">
+        <productName>Camera Numerique 8x</productName>
+        <USPrice>220.33</USPrice>
+        <type>video camera</type>
+    </item>
+	<item partNum="789-CA">
+        <productName>Camera Numerique 12x</productName>
+        <USPrice>270.33</USPrice>
+        <type>video camera</type>
+    </item>
+	<item partNum="789-CB">
+        <productName>Camera Numerique 60x</productName>
+        <USPrice>2220.33</USPrice>
+        <type>video camera</type>
+    </item>
+	<item partNum="789-CC">
+        <productName>Camera Numerique Stabilisé</productName>
+        <USPrice>800.33</USPrice>
+        <type>video camera</type>
+    </item>
+	
+	 <item partNum="122-AA">
+        <productName>TV Intelligente 40po</productName>
+        <USPrice>500.0</USPrice>
+        <type>TV</type>
+    </item>
+    <item partNum="122-AB">
+        <productName>TV 3D 40po</productName>
+        <USPrice>1000</USPrice>
+        <type>TV</type>
+    </item>
+	 <item partNum="122-AE">
+        <productName>TV Intelligente 3D </productName>
+        <USPrice>2500.0</USPrice>
+        <type>TV </type>
+    </item>
+	 <item partNum="456-AB">
+        <productName>DVD player Red</productName>
+        <USPrice>502.0</USPrice>
+        <type>DVD player</type>
+		
+    </item>
+    
+	 <item partNum="456-AC">
+        <productName>DVD player Avatar edition</productName>
+        <USPrice>99.99</USPrice>
+        <type>DVD player</type>
+		
+    </item>
+	
+</itemsInfo>

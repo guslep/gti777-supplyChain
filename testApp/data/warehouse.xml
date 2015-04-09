@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<warehouse xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <idWarehouse>12123232</idWarehouse>
+    <billTo country="US">
+        <name>Super warehouse A</name>
+        <street>123 test street</street>
+        <city>Boston</city>
+        <state>Massachusset</state>
+        <zip>1278</zip>
+    </billTo>
+    <location country="US">
+        <name>Super warehouse A</name>
+        <street>123 test street</street>
+        <city>Boston</city>
+        <state>Massachusset</state>
+        <zip>1278</zip>
+    </location>
+</warehouse>

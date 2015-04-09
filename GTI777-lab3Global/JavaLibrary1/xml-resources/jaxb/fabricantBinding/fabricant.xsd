@@ -13,16 +13,22 @@
         </xsd:documentation>
     </xsd:annotation>
     
-    <xsd:element name="fabricant" type="tns:PurchaseOrderType"/>
+    <xsd:element name="fabricant" type="tns:PurchaseOrderInfo"/>
+    <xsd:element name="itemProduced" type="tns:itemsInfo"/>
     
     <xsd:element name="comment" type="xsd:string"/>
     
-    <xsd:complexType name="PurchaseOrderType">
+    <xsd:complexType name="PurchaseOrderInfo">
         <xsd:sequence>
             <xsd:element name="shipTo" type="tns:USAddress"/>
+            <xsd:element name="shipDate" type="xsd:date" minOccurs="0"/>
             <xsd:element name="billTo" type="tns:USAddress"/>
             <xsd:element ref="tns:comment" minOccurs="0"/>
-            <xsd:element name="items"  type="tns:PurchaseOrder"/>
+            <xsd:element name="purchaseOrder"  type="tns:PurchaseOrder"/>
+            <xsd:element name="totalPrice"  type="xsd:positiveInteger"/>
+            <xsd:element name="purchaseOrderNumber"  type="xsd:positiveInteger"/>
+            <xsd:element name="clientId"  type="xsd:positiveInteger"/>
+            
         </xsd:sequence>
         <xsd:attribute name="orderDate" type="xsd:date"/>
     </xsd:complexType>
@@ -45,13 +51,7 @@
                 <xsd:complexType>
                     <xsd:all>
                         <xsd:element name="productName" type="xsd:string"/>
-                        <xsd:element name="poID">
-                            <xsd:simpleType>
-                                <xsd:restriction base="xsd:positiveInteger">
-                                   
-                                </xsd:restriction>
-                            </xsd:simpleType>
-                        </xsd:element>
+                      
                         <xsd:element name="quantity">
                             <xsd:simpleType>
                                 <xsd:restriction base="xsd:positiveInteger">
@@ -60,14 +60,74 @@
                             </xsd:simpleType>
                         </xsd:element>
                         <xsd:element name="USPrice"  type="xsd:decimal"/>
-                        <xsd:element ref="tns:comment"   minOccurs="0"/>
-                        <xsd:element name="shipDate" type="xsd:date" minOccurs="0"/>
+                        <xsd:element name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="DVD player"/>
+                                    <xsd:enumeration value="video camera"/>
+                                    <xsd:enumeration value="TV"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                     
                     </xsd:all>
                     <xsd:attribute name="partNum" type="tns:SKU" use="required"/>
                 </xsd:complexType>
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+    
+    <xsd:complexType name="itemsInfo">
+        <xsd:sequence>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="productName" type="xsd:string"/>
+                        <xsd:element name="USPrice"  type="xsd:decimal"/>
+                        <xsd:element name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="DVD player"/>
+                                    <xsd:enumeration value="video camera"/>
+                                    <xsd:enumeration value="TV"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                    <xsd:attribute name="partNum" type="tns:SKU" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="orderList">
+        <xsd:sequence>
+            <xsd:element name="poSummary" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:all>
+                          <xsd:element name="purchaseOrderNumber"  type="xsd:positiveInteger"/>
+                             <xsd:element name="clientId"  type="xsd:positiveInteger"/>
+                        <xsd:element name="orderPrice"  type="xsd:positiveInteger"/>
+                        <xsd:element name="status">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="paid"/>
+                                    <xsd:enumeration value="not paid"/>
+                                    <xsd:enumeration value="open"/>
+                                    <xsd:enumeration value="processed"/>
+                                    <xsd:enumeration value="shipped"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+                
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
     
     <!-- Stock Keeping Unit, a code for identifying products -->
     <xsd:simpleType name="SKU">

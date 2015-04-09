@@ -16,6 +16,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -67,6 +68,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PurchaseOrder", propOrder = {
     "item"
@@ -159,6 +161,8 @@ public class PurchaseOrder {
         protected XMLGregorianCalendar shipDate;
         @XmlAttribute(name = "partNum", required = true)
         protected String partNum;
+           @XmlElement(required = true)
+        protected String type;
 
         /**
          * Gets the value of the productName property.
@@ -171,6 +175,31 @@ public class PurchaseOrder {
         public String getProductName() {
             return productName;
         }
+        
+         /**
+         * Gets the value of the type property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getType() {
+            return type;
+        }
+
+        /**
+         * Sets the value of the type property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setType(String value) {
+            this.type = value;
+        }
+
 
         /**
          * Sets the value of the productName property.

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://fabricant.lab3.com/" xmlns:tns="http://fabricant.lab3.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="hello" nillable="true" type="tns:hello"/>
+
+  <xs:element name="helloResponse" nillable="true" type="tns:helloResponse"/>
+
+  <xs:element name="obtenirInfoProduit" nillable="true" type="tns:obtenirInfoProduit"/>
+
+  <xs:element name="obtenirInfoProduitResponse" nillable="true" type="tns:obtenirInfoProduitResponse"/>
+
+  <xs:element name="receivePayment" nillable="true" type="tns:receivePayment"/>
+
+  <xs:element name="receivePaymentResponse" nillable="true" type="tns:receivePaymentResponse"/>
+
+  <xs:element name="traiterOrdreAchat" nillable="true" type="tns:traiterOrdreAchat"/>
+
+  <xs:element name="traiterOrdreAchatResponse" nillable="true" type="tns:traiterOrdreAchatResponse"/>
+
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receivePayment">
+    <xs:sequence>
+      <xs:element name="numOrdre" type="xs:integer" minOccurs="0"/>
+      <xs:element name="prixTotal" type="xs:integer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receivePaymentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="traiterOrdreAchat">
+    <xs:sequence>
+      <xs:element name="purchaseOrder" type="tns:purchaseOrderInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="purchaseOrderInfo">
+    <xs:sequence>
+      <xs:element name="billTo" type="tns:usAddress" minOccurs="0"/>
+      <xs:element name="clientId" type="xs:integer" minOccurs="0"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:element name="orderDate" type="xs:anySimpleType" minOccurs="0"/>
+      <xs:element name="purchaseOrder" type="tns:purchaseOrder" minOccurs="0"/>
+      <xs:element name="purchaseOrderNumber" type="xs:integer" minOccurs="0"/>
+      <xs:element name="shipDate" type="xs:anySimpleType" minOccurs="0"/>
+      <xs:element name="shipTo" type="tns:usAddress" minOccurs="0"/>
+      <xs:element name="totalPrice" type="xs:integer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="usAddress">
+    <xs:sequence>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="country" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="street" type="xs:string" minOccurs="0"/>
+      <xs:element name="zip" type="xs:decimal" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="purchaseOrder">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="traiterOrdreAchatResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenirInfoProduit">
+    <xs:sequence>
+      <xs:element name="partNum" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenirInfoProduitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:item" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="item">
+    <xs:sequence>
+      <xs:element name="partNum" type="xs:string" minOccurs="0"/>
+      <xs:element name="productName" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+      <xs:element name="USPrice" type="xs:decimal" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

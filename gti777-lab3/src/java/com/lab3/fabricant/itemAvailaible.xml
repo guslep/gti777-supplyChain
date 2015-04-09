@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<itemsInfo xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <item partNum="123-AB">
+        <productName>DVD player</productName>
+        <USPrice>72.0</USPrice>
+    </item>
+    <item partNum="122-AE">
+        <productName>TV Inteligente </productName>
+        <USPrice>500.0</USPrice>
+    </item>
+    <item partNum="456-CA">
+        <productName>Camera Numerique 8x</productName>
+        <USPrice>220.33</USPrice>
+    </item>
+</itemsInfo>

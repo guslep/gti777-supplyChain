@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/universite/GTI777/gti777-lab3/src/java/fabricant.xsd</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/build/generated-sources/jaxb/binding/USAddress.java</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/nbproject/xml_binding_build.xml</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/src/java/newLoanApplication.xsd</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/src/java/wareHouse.xsd</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/src/java/newPurchaseOrder.xsd</file>
-            <file>file:/E:/universite/GTI777/gti777-lab3/src/java/ca/etsmtl/ws/lab3/fabricant.java</file>
+            <file>file:/E:/universite/GTI777/gti777-supplyChain/gti777-lab3/src/java/com/lab3/fabricant/fabricant.java</file>
+            <file>file:/E:/universite/GTI777/gti777-supplyChain/gti777-lab3/src/java/com/lab3/fabricant/singletonOrderPassed.java</file>
+            <file>file:/E:/universite/GTI777/gti777-supplyChain/gti777-lab3/src/java/com/lab3/fabricant/singletonItems.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<purchaseOrder xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <item partNum="123-AB">
+        <productName>DVDPLAYER</productName>
+        <quantity>200</quantity>
+        <USPrice>200.55</USPrice>
+        <type>DVD player</type>
+    </item>
+    <item partNum="456-CA">
+        <productName>TV 3d 56''</productName>
+        <quantity>250</quantity>
+        <USPrice>900.55</USPrice>
+        <type>TV</type>
+    </item>
+</purchaseOrder>

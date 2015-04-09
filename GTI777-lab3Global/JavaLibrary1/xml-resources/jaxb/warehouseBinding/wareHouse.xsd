@@ -22,43 +22,125 @@
     <xsd:complexType name="warehouseType">
         <xsd:sequence>
             <xsd:element name="warehouseObject"  type="tns:Warehouse"/>
-            <xsd:element name="transaction" type="tns:SalesOrder"/>  
-            <xsd:element name="listItems" type="tns:Items"/>  
+           
+            <xsd:element name="listItems" type="tns:ListeItem"/>  
 
         </xsd:sequence>
         <xsd:attribute name="orderDate" type="xsd:date"/>
            </xsd:complexType>
     
-    <xsd:complexType name="SalesOrder">
-        <xsd:sequence>
-            <xsd:element name="idClients"   type="xsd:string"/>
-            <xsd:element name="listItem" type="tns:Items" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element name="date"   type="xsd:date"/>
-            <xsd:element name="price"  type="xsd:decimal"/>
-            <xsd:element name="shipTo" type="tns:USAddress"/>
-            <xsd:element name="billTo" type="tns:USAddress"/>
-        </xsd:sequence>
-       
-    </xsd:complexType>
+   
    
     <xsd:complexType name="Warehouse">
         <xsd:sequence>
-            <xsd:element name="idWarehouse"   type="xsd:string"/>
-            <xsd:element name="itemsInventory" type="tns:Items" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="idWarehouse"   type="xsd:positiveInteger"/>
+             <xsd:element name="billTo" type="tns:USAddress"/>
            <xsd:element name="location" type="tns:USAddress"/>
         </xsd:sequence>
        
     </xsd:complexType>
     
-     <xsd:complexType name="Items" >
+    
+     <xsd:complexType name="Inventory">
         <xsd:sequence>
-            <xsd:element name="idItems"   type="xsd:string"/>
-            <xsd:element name="name" type="xsd:string"/>
-           <xsd:element name="quantity" type="xsd:positiveInteger"/>
+            <xsd:element name="InventoryItem" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="productName" type="xsd:string"/>
+                        <xsd:element name="USPrice"  type="xsd:decimal"/>
+                        <xsd:element name="Quantity"  type="xsd:positiveInteger"/>
+                        
+                        <xsd:element name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="DVD player"/>
+                                    <xsd:enumeration value="video camera"/>
+                                    <xsd:enumeration value="TV"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                    <xsd:attribute name="partNum" type="tns:SKU" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
         </xsd:sequence>
-       
     </xsd:complexType>
     
+    
+    
+    <xsd:complexType name="ListeItem">
+        <xsd:sequence>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="productName" type="xsd:string"/>
+                        <xsd:element name="USPrice"  type="xsd:decimal"/>
+                        <xsd:element name="quantity" type="xsd:positiveInteger" />
+                        <xsd:element name="type">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="DVD player"/>
+                                    <xsd:enumeration value="video camera"/>
+                                    <xsd:enumeration value="TV"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                    <xsd:attribute name="partNum" type="tns:SKU" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+     <xsd:complexType name="StatutListeItemExpedier">
+        <xsd:sequence>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="productName" type="xsd:string"/>
+                          <xsd:element name="quantity" type="xsd:positiveInteger"/>
+                     
+                        <xsd:element name="status">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="delivered"/>
+                                    <xsd:enumeration value="not deliverd"/>
+                                    
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:all>
+                    <xsd:attribute name="partNum" type="tns:SKU" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    
+    
+       <xsd:complexType name="client">
+        <xsd:sequence>
+            <xsd:element name="name"   type="xsd:string"/>
+            <xsd:element name="numRef" type="xsd:positiveInteger"/>
+            <xsd:element name="street1"   type="xsd:string"/>
+            <xsd:element name="street2"  type="xsd:string"/>
+            <xsd:element name="zip"    type="xsd:string"/>
+                <xsd:element name="ville"  type="xsd:string"/>
+            <xsd:element name="province"    type="xsd:string"/>
+            <xsd:element name="pays"    type="xsd:string"/>
+            
+            
+        </xsd:sequence>
+        <xsd:attribute name="country" type="xsd:NMTOKEN"
+                       fixed="US"/>
+    </xsd:complexType>
+    
+    
+    
+    <!-- Stock Keeping Unit, a code for identifying products -->
+   
     <!-- Stock Keeping Unit, a code for identifying products -->
   
     

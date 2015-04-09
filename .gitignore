@@ -57,3 +57,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/testApp/nbproject/private/
+/testApp/build/
+/GTI777-lab3Global/JavaLibrary1/dist/
+/gti777-lab3-warehouseA/nbproject/private/
+/gti777-lab3-warehouseA/build/

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inventory xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+  
+	
+	 <InventoryItem partNum="123-AB">
+        <productName>DVD player black with multiple tray</productName>
+        <USPrice>80.0</USPrice>
+        <type>DVD player</type>
+		<quantity> 20</quantity>
+    </InventoryItem>
+    <InventoryItem partNum="122-AE">
+        <productName>TV Inteligente </productName>
+        <USPrice>530.0</USPrice>
+        <type>TV</type>
+		<quantity> 23</quantity>
+    </InventoryItem>
+    <InventoryItem partNum="456-CA">
+        <productName>Camera Numerique 8x</productName>
+        <USPrice>280.33</USPrice>
+        <type>video camera</type>
+		<quantity> 50</quantity>
+    </InventoryItem>
+	<InventoryItem partNum="789-CA">
+        <productName>Camera Numerique 12x</productName>
+        <USPrice>400.33</USPrice>
+		<quantity> 50</quantity>
+        <type>video camera</type>
+    </InventoryItem>
+	<InventoryItem partNum="789-CB">
+        <productName>Camera Numerique 60x</productName>
+        <USPrice>2600.33</USPrice>
+        <type>video camera</type>
+		<quantity> 46</quantity>
+    </InventoryItem>
+	<InventoryItem partNum="789-CC">
+        <productName>Camera Numerique Stabilisé</productName>
+        <USPrice>1100.33</USPrice>
+        <type>video camera</type>
+		<quantity> 38</quantity>
+    </InventoryItem>
+	
+	
+    
+	 <InventoryItem partNum="456-AC">
+        <productName>DVD player Avatar edition</productName>
+        <USPrice>135.99</USPrice>
+        <type>DVD player</type>
+		<quantity> 47</quantity>
+    </InventoryItem>
+</inventory>

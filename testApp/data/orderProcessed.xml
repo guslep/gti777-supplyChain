@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orderList xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <poSummary>
+        <purchaseOrderNumber>987654321</purchaseOrderNumber>
+        <clientId>12345</clientId>
+        <orderPrice>132654789</orderPrice>
+        <status>paid</status>
+    </poSummary>
+    <poSummary>
+        <purchaseOrderNumber>654987321</purchaseOrderNumber>
+        <clientId>787879546</clientId>
+        <orderPrice>265248</orderPrice>
+        <status>paid</status>
+    </poSummary>
+    
+</orderList>

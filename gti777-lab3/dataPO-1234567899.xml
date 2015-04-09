@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<purchaseOrder xmlns="http://xml.netbeans.org/examples/PurchaseOrder">
+    <item partNum="123-AB">
+        <productName>DVD player black with multiple tray</productName>
+        <quantity>100</quantity>
+        <USPrice>90.0</USPrice>
+        <type>123-AB</type>
+    </item>
+</purchaseOrder>
